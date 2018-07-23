@@ -32,10 +32,26 @@ public class AccountApp
       System.out.printf("%nadding %.2f to account2 balance%n%n", 
          depositAmount);
       account2.Deposit(depositAmount); // add to account2 balance
-
-      // display balances
+      
+      // witdraw test
+      System.out.print("Enter withdraw amount for account1: "); // prompt
+      double withdrawAmount = input.nextDouble(); // obtain user input
+      System.out.printf("%nreducing %.2f from account1 balance%n", 
+         withdrawAmount);
+      account1.Withdraw(withdrawAmount);
+      
+      System.out.print("Enter withdraw amount for account2: "); // prompt
+      withdrawAmount = input.nextDouble(); // obtain user input
+      System.out.printf("%nreducing %.2f from account2 balance%n", 
+         withdrawAmount);
+      account2.Withdraw(withdrawAmount);
+      
+      
+       // display balances
       account1.printAccount();
       account2.printAccount();
+      
+      
    } // end main
 
 } // end class AccountTest

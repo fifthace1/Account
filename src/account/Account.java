@@ -59,4 +59,15 @@ public class Account {
          this.GetName(), this.GetBalance()); 
     }
     
+    public void Withdraw(double amount)
+    {
+        if (amount > this.balance)
+        {
+            System.out.println("You don't have enough money in your account!");
+        }
+        else{
+            System.out.println("The money is paid seccesfully!");
+            this.balance = this.balance - amount;
+        }
+    }
 }
